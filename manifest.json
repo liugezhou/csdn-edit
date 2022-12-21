@@ -1,0 +1,20 @@
+  {
+    "manifest_version":2,
+    "name": "Can Copy It",
+    "version":"1.0",
+    "description":"解决CSDN非登录情况下，不可以复制的尴尬",
+    "icons":{
+        "128":"img/logo.png",
+        "48":"img/logo.png",
+        "16":"img/logo.png"
+    },
+    "browser_action":{
+        "default_icon":"img/logo.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://github.com/*","https://blog.csdn.net/*"],
+        "js": ["script.js"]
+      }
+    ]
+  }
